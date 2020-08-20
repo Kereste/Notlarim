@@ -54,7 +54,7 @@ Mandatory arguments to long options are mandatory for short options too.
 "-a, --all" these are flags. Anything that doesnt takes a value is flag.
 "-C or --color[=WHEN]" is an option.
 
- ###Permissions
+ <h3>Permissions</h3>
  
  ```shell script
  anil@anil-SATELLITE-L50-B:~$ ls -l
@@ -140,7 +140,7 @@ $ at there means I'm currently not running things as root.
     
 
 
-###Rewiring Console Input/Output
+<h3>Rewiring Console Input/Output</h3>
 Shell gives us an ability to rewire input/output streams.
 Most straightforward way to do this is using angle brackets
 "< filename" means rewire the input of this program to be the contents of this file.
@@ -182,7 +182,7 @@ Example:
 ls -l / | tail -n1
 ```
 
-### KERNEL
+<h3>KERNEL</h3>
 **cd ~/sys && ls**
     This is a whole new world. These are not files, these are kernel parameters.
 
