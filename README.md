@@ -1,4 +1,9 @@
-# -Bourne Again Shell (BASH)-
+<h1>-Bourne Again Shell (BASH)-</h1>
+This is the notes I prepared from my lessons at MIT Missing Semester.
+
+//todo: migrate your other notes to here too. Use this readme as index, etc.
+
+<h2>Course overview + the shell</h2>
 Source is here: https://missing.csail.mit.edu/2020/course-shell/
 
 **Environment Variables:**
@@ -54,7 +59,7 @@ Mandatory arguments to long options are mandatory for short options too.
 "-a, --all" these are flags. Anything that doesnt takes a value is flag.
 "-C or --color[=WHEN]" is an option.
 
- <h3>Permissions</h3>
+ <h3>Permissions & File Management</h3>
  
  ```shell script
  anil@anil-SATELLITE-L50-B:~$ ls -l
@@ -183,7 +188,7 @@ ls -l / | tail -n1
 ```
 
 <h3>KERNEL</h3>
-**cd ~/sys && ls**
+<strong>cd ~/sys && ls</strong>
     This is a whole new world. These are not files, these are kernel parameters.
 
 **Example:**
@@ -211,3 +216,143 @@ anil@anil-SATELLITE-L50-B:/sys/class/backlight/intel_backlight$ sudo su
 [sudo] password for anil: 
 root@anil-SATELLITE-L50-B:/sys/devices/pci0000:00/0000:00:02.0/drm/card0/card0-eDP-1/intel_backlight# echo 500 > brightness
 ```
+
+<h2>Lecture 2: Shell Tools and Scripting (2020)</h2>
+**Source:** https://missing.csail.mit.edu/2020/shell-tools/ <br>
+
+* Spaces are really important in bash. It seperates the arguments.
+
+* For strings, "" and '' is different.
+"" allows using variables in the string. So some parts of the string can be dynamic with that option.
+'' is for literal strings.
+
+**Defining variables:** You can define variables with "="
+Example:
+``` shell script
+anil@anil-SATELLITE-L50-B:~$ foo=hello
+anil@anil-SATELLITE-L50-B:~$ echo $foo
+hello
+```
+
+
+As with most programming languages, bash supports control flow techniques including if, case, while and for. 
+Similarly, bash has functions that take arguments and can operate with them. 
+Here is an example of a function that creates a directory and cds into it.
+``` shell script
+mcd () {
+    mkdir -p "$1"
+    cd "$1"
+}
+```
+
+Unlike other scripting languages, bash uses a variety of special variables to refer to arguments, error codes, and other relevant variables. Below is a list of some of them. A more comprehensive list can be found here.
+
+    $0 - Name of the script
+    $1 to $9 - Arguments to the script. $1 is the first argument and so on.
+    $@ - All the arguments
+    $# - Number of arguments
+    $? - Return code of the previous command
+    $$ - Process identification number (PID) for the current script
+    !! - Entire last command, including arguments. A common pattern is to execute a command only for it to fail due to missing permissions; you can quickly re-execute the command with sudo by doing sudo !!
+    $_ - Last argument from the last command. If you are in an interactive shell, you can also quickly get this value by typing Esc followed by .
+
+//todo: Sort this lesson some other way. Video is chaotic.
+
+<h2>Editors (Vim)</h2>
+**Source:** https://missing.csail.mit.edu/2020/editors/ <br>
+
+* Vim is a modal editor.
+* Vim's interface itself is a programming language. 
+That means, different key combinations has different effects and once you learn the different effects you can actually combine them 
+together, just like a programming language you can learn different functions and stuff and then glue them all together 
+to make an interesting program in the same way once you learn vims different and editing commands and things like that, 
+you can talk to vim by programming vim through its interface, and once this becomes muscle memory you can basically edit files
+at the speed which you think.
+
+<h3>Keys & Fundemental Commands</h3>
+i = Goes to insert mode.
+esc = Goes back to normal mode.
+
+**Undo**
+u = undo
+If you press "u" after going out of insert mode to normal mode, then it will undo everything you did in that previous insert mode 
+
+^R = redo
+
+:w = save changes?
+:q = Quit
+:qa = Quit all
+
+x = deletes a character
+d + w = delete a word
+d + e = deletes the end of the word
+dd = deletes the whole row
+
+y = copy
+p = paste
+
+~ = Changes case of the selection
+
+**r(replace)**
+r + ? = takes another char as an argument and replaces cursors char 
+
+**C (Change) These commands puts vim into insert mode after completion** 
+c + e = deletes the end of a word
+c + c = deletes the line
+
+o = inserts line below (At normal mode)
+O = inserts line above (At normal mode)
+
+<h3>Navigation</h3>
+Navigating the cursor can be done with h j k l .
+These buttons corresponds to: left, down, up, right.
+Dont waste time by moving your hand to the arrow keys they say. 
+
+w = moves the cursor forward by one word.
+d = moves the cursor back by one word.
+e = moves the cursor to the end of a word.
+
+b = Goes back but I dunno the difference between this and d
+0 = goes to the beginning of the current line,
+$ = goes to the end of the current line.
+^ = goes to the first non-empty character of the current line.
+
+^u = scrolls up
+^d = scrolls down
+
+**--Visual Mode--**
+v = enters Visual mode.
+Once you are in visual mode, you can use most of your normal mode keys to move your pointer around. 
+w = to move by words.
+
+**--Visual Line Mode--**
+V = Enters Visual Line mode
+Can be used to select whole rows of text. 
+
+**--Visual Block Mode--**
+^V = Enters Visual Block mode
+Can be used to select rectangular blocks.
+
+**Counts**
+You can give vim a number to do some particular thing some number of times.
+For example, if you wanna go down 4 rows, you can press 4 + j and you will go down four rows instead of one.
+
+**Modifiers**
+
+
+
+<h2>Data Wrangling</h2>
+**Source:** https://missing.csail.mit.edu/2020/data-wrangling/
+
+**grep**
+grep is a command-line utility for searching plain-text data sets for lines that match a regular expression. 
+It is one of the most useful commands on Linux and Unix-like system.
+
+**sed(Stream EDitor)**
+sed is a Unix utility that parses and transforms text, using a simple, compact programming language. 
+It can perform lot’s of function on file like, searching, find and replace, insertion or deletion.
+
+**Regex(REgular EXpressions)**<br>
+**^** = matches from beginning of a line<br>
+**$** = matches from end of a line<br>
+if you use those together, then we say it has to match complete line.

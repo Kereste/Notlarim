@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8564139a-d908-4dea-9aaf-fe43636c4290" name="Default Changelist" comment="" />
+    <list default="true" id="8564139a-d908-4dea-9aaf-fe43636c4290" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,10 +31,14 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
   <component name="ProjectId" id="1gMZS10AMNvrlDFOwT4iqGPe4CC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -41,20 +66,44 @@
       <option name="presentableId" value="Default" />
       <updated>1597926419202</updated>
       <workItem from="1597926420530" duration="11478000" />
+      <workItem from="1597938238368" duration="620000" />
+      <workItem from="1598002375833" duration="9825000" />
+      <workItem from="1598207361872" duration="241000" />
+      <workItem from="1598209512002" duration="4986000" />
+      <workItem from="1598253672496" duration="13000" />
+      <workItem from="1598257004680" duration="1866000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="1851" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1597935458678">
       <screen x="0" y="27" width="3286" height="1053" />
     </state>
     <state x="1851" y="188" width="1022" height="737" key="SettingsEditor/0.27.3286.1053@0.27.3286.1053" timestamp="1597935458678" />
-    <state x="1438" y="274" width="857" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597935781840">
-      <screen x="0" y="27" width="3286" height="1053" />
+    <state x="2207" y="233" width="848" height="794" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598022120423">
+      <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1438" y="274" width="857" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.3286.1053@0.27.3286.1053" timestamp="1597935781840" />
+    <state x="598" y="478" width="384" height="602" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1366.0.1920.1080/0.312.1366.768@0.312.1366.768" timestamp="1598012510456" />
+    <state x="2207" y="233" width="848" height="794" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1598022120423" />
+    <state x="463" y="611" width="429" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598002597219">
+      <screen x="0" y="312" width="1366" height="768" />
+    </state>
+    <state x="463" y="611" width="429" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1366.0.1920.1080/0.312.1366.768@0.312.1366.768" timestamp="1598002597219" />
   </component>
 </project>
