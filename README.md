@@ -3,7 +3,7 @@ This is the notes I prepared from my lessons at MIT Missing Semester.
 
 //todo: migrate your other notes to here too. Use this readme as index, etc.
 
-<h2>Course overview + the shell</h2>
+<h2>Course overview + The Shell</h2>
 Source is here: https://missing.csail.mit.edu/2020/course-shell/
 
 **Environment Variables:**
@@ -103,7 +103,7 @@ We take one row from this an example:
  Write: Are you allowed to rename/create/remove files in this directory?
  Execute: Are you allowed to enter this directory?
  
- **mv**
+ **mv**<br>
     It can rename and move a file.
  
  **cp**
@@ -124,13 +124,15 @@ We take one row from this an example:
 **ctrl + l**
     Clears up the console and goes to the top.
     
-**cat**
+**cat**<br>
     Prints the contents of a file.<br>
 Example:
+``` shell script
 cat /etc/*-release
-    Seeing the operating system version & info
-    
-**#**
+```
+Seeing the operating system version & info   
+
+**#**<br>
     Adding this to the beginning of the row means: "Run this as root."
 ``` shell script
 anil@anil-SATELLITE-L50-B:/sys/class$
@@ -142,8 +144,6 @@ $ at there means I'm currently not running things as root.
 
 **tee**
     Takes its input and writes it output, but also to standard output.
-    
-
 
 <h3>Rewiring Console Input/Output</h3>
 Shell gives us an ability to rewire input/output streams.
@@ -258,7 +258,7 @@ Unlike other scripting languages, bash uses a variety of special variables to re
 
 //todo: Sort this lesson some other way. Video is chaotic.
 
-<h2>Editors (Vim)</h2>
+<h2>Lecture 3: Editors (Vim)</h2>
 **Source:** https://missing.csail.mit.edu/2020/editors/ <br>
 
 * Vim is a modal editor.
@@ -353,6 +353,102 @@ sed is a Unix utility that parses and transforms text, using a simple, compact p
 It can perform lot’s of function on file like, searching, find and replace, insertion or deletion.
 
 **Regex(REgular EXpressions)**<br>
-**^** = matches from beginning of a line<br>
-**$** = matches from end of a line<br>
-if you use those together, then we say it has to match complete line.
+todo-RegexTutorialFromSource: https://regexone.com/ 
+
+    . means “any single character” except newline
+    * zero or more of the preceding match
+    + one or more of the preceding match
+    [abc] any one character of a, b, and c
+    (RX1|RX2) either something that matches RX1 or RX2
+    ^ the start of the line
+    $ the end of the line
+
+if you use ^ and $ together, then we say it has to match complete line.
+
+**wc(Word Count)**
+    Counts the number of words in the file.
+    -l gives the line count.
+
+**uniq**
+    Gets the sorted data and only prints them once.
+    -c = counts the number of duplicates and prints them with unique words.
+
+**sort**
+    Sorts unique data. Default is alphabetical.
+Example:
+example and it's regex is too big, so it's not showed here. You can see it in the source.
+``` shell script
+example regex | sort | uniq -c | sort -nk1,1 | tail -n10
+```
+This does the regex, sorts it alphabetically, then finds duplicates, counts them and sorts them again, then gives the last 10 lines.
+
+sort -nk1,1
+n means numeric sort.
+k1,1 means on the first column of the input.
+k lets you select a white space seperated column from the input to sort by.
+1,1 is for starting and stopping at the first column.
+
+After all of this, the example data looks like this: 
+```
+1115 123
+1141 ftpuser
+1415 oracle
+1444 postgres
+1561 ubuntu
+1951 user
+3326 admin
+3345 test
+3782 123456
+10892 root
+```
+
+After this, we can further develop our script to shape the data more:
+``` shell script
+example regex | sort | uniq -c | sort -nk1,1 | tail -n10 | awk '{print $2}' | paste -s,
+```
+    
+**paste**
+    takes a bunch of lines and pastes them together into a single line.
+    I dont get what the -s used for.
+    
+**awk**<br>
+    This is a column based stream processor. It deserves attention because it is a powerful language for this type of data wrangling
+    awk by default, will parse its input in whitespace seperated columns and then you operate on those columns seperately.
+    In the example below, we are saying print the second column.
+
+An odd example with awk:
+example regex | sort | uniq -c | awk '$1 == 1 && $2 ~ /^c.*e$/ {print $0}'
+This only gives unique results that starts with c, ends with e only.
+Result:
+```
+1 cachestore
+1 calmejane
+1 camise
+1 cande
+1 candyce
+... vs vs
+```
+
+**bc (Basic Calculator)**
+Example:
+``` shell script
+echo "1 + 2" | bc -l 
+```
+Result is: 3
+
+**gnuplot**
+    For visiualising data, you can use gnuplot. Commands look like not too complex and you can easily output your data as histogram, etc.
+    
+**xargs**
+    Takes lines of input and turns them into arguments.
+    
+**ffmpeg**
+    This is for encoding and decoding video, and to some extent, images.
+    A detailed explanation of it is in the source video, around minute 47.
+    
+**gzip**
+    Compresses files.
+    
+
+<h2>Lecture 6: Version Control (Git)</h2>
+
