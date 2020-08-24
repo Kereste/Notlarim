@@ -20,7 +20,8 @@ Relative Paths: These are relative to where you currently are.
 
 **ls**<br>
 	Lists the files in the current directory. Also you can give it a route to list files at that spot.
-	using "ls -l" is especially helpful. Still gives the list of files but shows more detail. 
+	-l is especially helpful. Still gives the list of files but shows more detail. 
+	-a shows all files. Even the hidden ones. (todo: be sure of this)
 
 **~**<br>
 At route, tilde always expands to the home directory.
@@ -451,4 +452,34 @@ Result is: 3
     
 
 <h2>Lecture 6: Version Control (Git)</h2>
+**Source:** https://missing.csail.mit.edu/2020/version-control/
+All of the commands here have to start with "git".
+
+Git uses Directed Acyclic Graph to model history.
+
+
+**Staging Area:** This is the place that you tell git what changes should be included in the next snapshot(commit) of the code you take.
+
+help can be used here like this:
+``` shell script
+git help commandname
+```
+
+**init**<br>
+    Turns the current folder into the git repository.
+    Creates the hidden .git folder for storing its internal data.
+    
+**status**<br>
+    Prints the current status
+    
+**add**<br>
+    Adds that file(s) to the staging area.
+Example:  
+``` shell script
+git add hello.txt
+```
+
+
+**log**
+
 
