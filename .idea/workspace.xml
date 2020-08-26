@@ -26,10 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8564139a-d908-4dea-9aaf-fe43636c4290" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MIT Lesson 8 - Metaprogramming.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MIT Lesson 1 - The Shell.md" beforeDir="false" afterPath="$PROJECT_DIR$/MIT Lesson 1 - Bourne Again SHell (BASH).md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MIT Lesson 2 - Shell Tools and Scripting .md" beforeDir="false" afterPath="$PROJECT_DIR$/MIT Lesson 2 - Shell Tools and Scripting .md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +85,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -95,6 +94,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -116,7 +120,7 @@
       <workItem from="1598349124218" duration="241000" />
       <workItem from="1598350144692" duration="394000" />
       <workItem from="1598359948052" duration="4403000" />
-      <workItem from="1598432467111" duration="7479000" />
+      <workItem from="1598432467111" duration="10283000" />
     </task>
     <servers />
   </component>
