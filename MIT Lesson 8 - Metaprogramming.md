@@ -3,9 +3,9 @@
 
 <h2>Semantic Version</h2>
 8.1.7<br>
-| | |-> Patch Version<br>
-| |-> Minor Version<br>
-|-> Major Version<br>
+│ │ └─> Patch Version<br>
+│ └─> Minor Version<br>
+└─> Major Version<br>
 
 <h3>Major Version</h3>
 Increment if you make a backwards incompatible change. 
