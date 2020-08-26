@@ -17,6 +17,15 @@ Relative Paths: These are relative to where you currently are.
 	Lists the files in the current directory. Also you can give it a route to list files at that spot.
 	-l is especially helpful. Still gives the list of files but shows more detail. 
 	-a shows all files. Even the hidden ones. (todo: be sure of this)
+	You can also search files with ls.
+	
+``` shell script
+    anil:Downloads$ ls *.zip
+     DebuggingInCSharpDemo.zip   linqer_4.6.0.1_trial.zip
+    'HTML Notes.zip'            'TD-W9970(EU)_V1_170726.zip'
+```
+	
+
 
 **~**<br>
 At route, tilde always expands to the home directory.
@@ -184,7 +193,7 @@ ls -l / | tail -n1
 ```
 
 <h3>KERNEL</h3>
-<strong>cd ~/sys && ls</strong>
+<strong>cd ~ && cd ../.. && cd /sys && ls</strong><br>
     This is a whole new world. These are not files, these are kernel parameters.
 
 **Example:**

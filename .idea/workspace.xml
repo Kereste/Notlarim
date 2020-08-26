@@ -26,13 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8564139a-d908-4dea-9aaf-fe43636c4290" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MIT Lesson 1 - The Shell.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MIT Lesson 2 - Shell Tools and Scripting .md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MIT Lesson 3 - Editors(Vim).md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MIT Lesson 4 - Data Wrangling.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MIT Lesson 6 - Version Control.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ubuntu.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIT Lesson 1 - The Shell.md" beforeDir="false" afterPath="$PROJECT_DIR$/MIT Lesson 1 - Bourne Again SHell (BASH).md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MIT Lesson 2 - Shell Tools and Scripting .md" beforeDir="false" afterPath="$PROJECT_DIR$/MIT Lesson 2 - Shell Tools and Scripting .md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,10 +40,38 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="MIT_Lesson_2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1598439894" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="MIT_Lesson_2" />
+                    <option name="lastUsedInstant" value="1598439874" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="ProjectId" id="1gMZS10AMNvrlDFOwT4iqGPe4CC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -92,7 +116,7 @@
       <workItem from="1598349124218" duration="241000" />
       <workItem from="1598350144692" duration="394000" />
       <workItem from="1598359948052" duration="4403000" />
-      <workItem from="1598432467111" duration="604000" />
+      <workItem from="1598432467111" duration="7479000" />
     </task>
     <servers />
   </component>
@@ -140,11 +164,11 @@
       <screen x="0" y="27" width="3286" height="1053" />
     </state>
     <state x="1851" y="188" width="1022" height="737" key="SettingsEditor/0.27.3286.1053@0.27.3286.1053" timestamp="1597935458678" />
-    <state x="598" y="457" width="394" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598363281720">
+    <state x="598" y="457" width="394" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598440262319">
       <screen x="0" y="312" width="1366" height="768" />
     </state>
     <state x="1438" y="274" width="857" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.3286.1053@0.27.3286.1053" timestamp="1597935781840" />
-    <state x="598" y="457" width="394" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1366.0.1920.1080/0.312.1366.768@0.312.1366.768" timestamp="1598363281720" />
+    <state x="598" y="457" width="394" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1366.0.1920.1080/0.312.1366.768@0.312.1366.768" timestamp="1598440262319" />
     <state x="2207" y="233" width="848" height="794" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1598022120423" />
     <state x="463" y="611" width="429" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598002597219">
       <screen x="0" y="312" width="1366" height="768" />
