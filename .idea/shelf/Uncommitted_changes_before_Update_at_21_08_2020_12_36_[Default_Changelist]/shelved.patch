@@ -1,0 +1,110 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># -Bourne Again Shell (BASH)-\nSource is here: https://missing.csail.mit.edu/2020/course-shell/\n\n**Environment Variables:**\nThey are some foundation variables that are set whenever you start your shell.\n\n**Absolute(Full) Path:** \nThey are the paths that fully determine the location of a file.\nRelative Paths: These are relative to where you currently are.\n\n**pwd(Print Working Directory)**\n\n**cd(Change Directory)**<br>\n\tAt route, \".\" means current directory. \"..\" means the parent directory. \n\n**ls**<br>\n\tLists the files in the current directory. Also you can give it a route to list files at that spot.\n\tusing \"ls -l\" is especially helpful. Still gives the list of files but shows more detail. \n\n**~**<br>\nAt route, tilde always expands to the home directory.\n\n**programnamehere --help**\nMost of the programs has this, if you --help it will helpfully print out bunch of info.<br>\nExample:\n```shell script\nanil@anil-SATELLITE-L50-B:~$ ls --help\nUsage: ls [OPTION]... [FILE]...\nList information about the FILEs (the current directory by default).\nSort entries alphabetically if none of -cftuvSUX nor --sort is specified.\n\nMandatory arguments to long options are mandatory for short options too.\n  -a, --all                  do not ignore entries starting with .\n  -A, --almost-all           do not list implied . and ..\n      --author               with -l, print the author of each file\n  -b, --escape               print C-style escapes for nongraphic characters\n      --block-size=SIZE      with -l, scale sizes by SIZE when printing them;\n                               e.g., '--block-size=M'; see SIZE format below\n  -B, --ignore-backups       do not list implied entries ending with ~\n  -c                         with -lt: sort by, and show, ctime (time of last\n                               modification of file status information);\n                               with -l: show ctime and sort by name;\n                               otherwise: sort by ctime, newest first\n  -C                         list entries by columns\n      --color[=WHEN]         colorize the output; WHEN can be 'always' (default\n                               if omitted), 'auto', or 'never'; more info below\n\n(list goes beyond this)\n```\n The way to read that usage line is: <br>\n \"...\" means zero or one or more. <br>\n [] means optional.<br>\n\n\"-a, --all\" these are flags. Anything that doesnt takes a value is flag.\n\"-C or --color[=WHEN]\" is an option.\n\n ###Permissions\n \n ```shell script\n anil@anil-SATELLITE-L50-B:~$ ls -l\n total 20900\n -rwxr-xr-x  1 anil anil  1933813 May 11 11:14  composer.phar\n -rw-rw-r--  1 anil anil   277120 May 11 11:13  composer-setup.php\n drwxr-xr-x  7 anil anil     4096 Ağu 19 19:02  Desktop\n drwxr-xr-x  4 anil anil     4096 Ağu 20 14:46  Documents\n drwxr-xr-x  5 anil anil     4096 Ağu 19 15:45  Downloads\n -rw-rw-r--  1 anil anil 19120179 Haz  9 13:44 'İstatistik Ders Notları.pdf'\n drwxr-xr-x  2 anil anil     4096 May  8 00:47  Music\n drwxrwxr-x  5 anil anil     4096 Haz 25 19:19  myApp\n drwxrwxr-x  8 anil anil     4096 Ağu 20 15:26  PhpstormProjects\n drwxr-xr-x  4 anil anil    12288 Ağu 20 09:27  Pictures\n drwxr-xr-x  2 anil anil     4096 May  8 00:47  Public\n drwxrwxr-x  6 anil anil     4096 Haz 25 13:05  RiderProjects\n drwxr-xr-x 13 anil anil     4096 Haz 26 10:49  snap\n drwxr-xr-x  2 anil anil     4096 May  8 00:47  Templates\n drwxr-xr-x  2 anil anil     4096 May  8 00:47  Videos\n drwxrwxr-x  3 anil anil     4096 May 28 13:06  VS\n```\n\nWe take one row from this an example:\n``` shell script\n drwxr-xr-x  5 anil anil     4096 Ağu 19 15:45  Downloads\n```\n Lets dissect this. If we seperate this into meaningful parts, it looks like this:<br>\n d * rwx * r-x * r-x \n First character, d means this is a directory. I will address this as a file at this example this for simplicity<br>\n The first group, the rwx is the permissions for the owner of the file.\n The second group, the r-x is the permissions for the group that owns this file.\n The third group, the other r-x is the permissions for the everyone else.\n \n Lets dissect further. rwx means: Read Write Execute. Meanings of those differs a bit between files & directories.\n if the letter is missing, than that thing is unauthorized for the client.\n Read and Write is self explanatory.\n Execute: TODO: Write this later\n \n For directories: \n Read: Are you allowed to see the contents of this directory?\n Write: Are you allowed to rename/create/remove files in this directory?\n Execute: Are you allowed to enter this directory?\n \n **mv**\n    It can rename and move a file.\n \n **cp**\n     It can copy a file.\n \n **rm**\n      For removing files. It's not recursive by default.\n      \n**rmdir**\n    For removing directories. Only if its empty.\n    \n**mkdir**\n    Creates a new directory.\n\n**man**\n    Shows us a manual page for the program.\n    \n**ctrl + l**\n    Clears up the console and goes to the top.\n    \n**cat**\n    Prints the contents of a file.<br>\nExample:\ncat /etc/*-release\n    Seeing the operating system version & info\n    \n**#**\n    Adding this to the beginning of the row means: \"Run this as root.\"\n``` shell script\nanil@anil-SATELLITE-L50-B:/sys/class$\n```\n$ at there means I'm currently not running things as root.\n\n**sudo su**\n    Here, what su does is elevating you to the shell as a super user.\n\n**tee**\n    Takes its input and writes it output, but also to standard output.\n    \n\n\n###Rewiring Console Input/Output\nShell gives us an ability to rewire input/output streams.\nMost straightforward way to do this is using angle brackets\n\"< filename\" means rewire the input of this program to be the contents of this file.\n\"> filename\" means rewire the output of this program to be the contents of this file.<br>\nExample:\n``` shell script\necho hello > hello.txt\n```\nThis prints the output of echo into the hello.txt file.\n\n``` shell script\ncat < hello.txt\n```\nIn this instance, shell is going to open hello.txt, take its contents and set those to be the input of cat.\nAnd then the cat is gonna print its output to the terminal.\n\nAlso, these can be used at the same time:\n``` shell script\ncat < hello.txt > hello2.txt\n```\nIn here, I'm telling the cat program nothing at all. Do your normal thing. Cat program knows nothing about this redirection.\nBut we are telling the shell use hello.txt as an input for the cat, and to write anything cat prints to hello2.txt .\n\n\n**>>**\n    This is append, not overwrite. So if we do this:\n``` shell script\ncat < hello.txt >> hello2.txt\n```\nit doesn't overwrite the contents of hello2.txt, but adds to that.\n\n**|**\n    Means take the output of the program to the left, and make it the output of the program to the right.\n    \n**tails** \n    This prints the last end lines of it's input.<br>\nExample:\n``` shell script\nls -l / | tail -n1\n```\n\n### KERNEL\n**cd ~/sys && ls**\n    This is a whole new world. These are not files, these are kernel parameters.\n\n**Example:**\n**Changing the laptops brightness**\n``` shell script\nanil@anil-SATELLITE-L50-B:/sys/class$ ls\nata_device   devfreq-event   i2c-adapter    misc          pps           scsi_generic  vfio\nata_link     dma             i2c-dev        mmc_host      printer       scsi_host     video4linux\nata_port     dmi             ieee80211      nd            ptp           sound         virtio-ports\nbacklight    drm             input          net           pwm           spi_master    vtconsole\nbdi          drm_dp_aux_dev  iommu          pci_bus       rapidio_port  spi_slave     wakeup\nblock        extcon          kfd            pci_epc       regulator     thermal       watchdog\nbluetooth    firmware        leds           phy           remoteproc    tpm           wmi_bus\nbsg          gpio            mdio_bus       powercap      rfkill        tpmrm\ndax          graphics        mei            power_supply  rtc           tty\ndevcoredump  hidraw          mem            ppdev         scsi_device   usbmisc\ndevfreq      hwmon           memstick_host  ppp           scsi_disk     vc\nanil@anil-SATELLITE-L50-B:/sys/class$ cd backlight/intel_backlight\nanil@anil-SATELLITE-L50-B:/sys/class/backlight/intel_backlight$ ls\nactual_brightness  brightness  max_brightness  scale      type\nbl_power           device      power           subsystem  uevent\nanil@anil-SATELLITE-L50-B:/sys/class/backlight/intel_backlight$ cat brightness \n892\nanil@anil-SATELLITE-L50-B:/sys/class/backlight/intel_backlight$ sudo su\n[sudo] password for anil: \nroot@anil-SATELLITE-L50-B:/sys/devices/pci0000:00/0000:00:02.0/drm/card0/card0-eDP-1/intel_backlight# echo 500 > brightness\n```
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- README.md	(revision 0b3ef500a01fc94d0bb7a66981ff58cac95a2542)
++++ README.md	(date 1598002597227)
+@@ -1,4 +1,9 @@
+-# -Bourne Again Shell (BASH)-
++<h1>-Bourne Again Shell (BASH)-</h1>
++This is the notes I prepared from my lessons at MIT Missing Semester.
++
++//todo: migrate your other notes to here too. Use this readme as index, etc.
++
++<h2>Course overview + the shell</h2>
+ Source is here: https://missing.csail.mit.edu/2020/course-shell/
+ 
+ **Environment Variables:**
+@@ -210,4 +215,9 @@
+ anil@anil-SATELLITE-L50-B:/sys/class/backlight/intel_backlight$ sudo su
+ [sudo] password for anil: 
+ root@anil-SATELLITE-L50-B:/sys/devices/pci0000:00/0000:00:02.0/drm/card0/card0-eDP-1/intel_backlight# echo 500 > brightness
+-```
+\ No newline at end of file
++```
++
++<h2>Lecture 2: Shell Tools and Scripting (2020)</h2>
++Source: https://missing.csail.mit.edu/2020/shell-tools/
++
++
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"8564139a-d908-4dea-9aaf-fe43636c4290\" name=\"Default Changelist\" comment=\"\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ComposerSettings\">\n    <execution />\n  </component>\n  <component name=\"GitToolBoxStore\">\n    <option name=\"projectConfigVersion\" value=\"2\" />\n  </component>\n  <component name=\"ProjectId\" id=\"1gMZS10AMNvrlDFOwT4iqGPe4CC\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"autoscrollFromSource\" value=\"true\" />\n    <option name=\"autoscrollToSource\" value=\"true\" />\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.path.for.package.eslint\" value=\"project\" />\n    <property name=\"node.js.path.for.package.tslint\" value=\"project\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"8564139a-d908-4dea-9aaf-fe43636c4290\" name=\"Default Changelist\" comment=\"\" />\n      <created>1597926419202</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1597926419202</updated>\n      <workItem from=\"1597926420530\" duration=\"11478000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"1851\" y=\"188\" width=\"1022\" height=\"737\" key=\"SettingsEditor\" timestamp=\"1597935458678\">\n      <screen x=\"0\" y=\"27\" width=\"3286\" height=\"1053\" />\n    </state>\n    <state x=\"1851\" y=\"188\" width=\"1022\" height=\"737\" key=\"SettingsEditor/0.27.3286.1053@0.27.3286.1053\" timestamp=\"1597935458678\" />\n    <state x=\"1438\" y=\"274\" width=\"857\" height=\"806\" key=\"com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser\" timestamp=\"1597935781840\">\n      <screen x=\"0\" y=\"27\" width=\"3286\" height=\"1053\" />\n    </state>\n    <state x=\"1438\" y=\"274\" width=\"857\" height=\"806\" key=\"com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.3286.1053@0.27.3286.1053\" timestamp=\"1597935781840\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 0b3ef500a01fc94d0bb7a66981ff58cac95a2542)
++++ .idea/workspace.xml	(date 1598002390716)
+@@ -1,7 +1,27 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="BranchesTreeState">
++    <expand>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </expand>
++    <select />
++  </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="8564139a-d908-4dea-9aaf-fe43636c4290" name="Default Changelist" comment="" />
++    <list default="true" id="8564139a-d908-4dea-9aaf-fe43636c4290" name="Default Changelist" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -10,10 +30,14 @@
+   <component name="ComposerSettings">
+     <execution />
+   </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
+   <component name="GitToolBoxStore">
+     <option name="projectConfigVersion" value="2" />
+   </component>
+   <component name="ProjectId" id="1gMZS10AMNvrlDFOwT4iqGPe4CC" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="autoscrollFromSource" value="true" />
+     <option name="autoscrollToSource" value="true" />
+@@ -41,11 +65,24 @@
+       <option name="presentableId" value="Default" />
+       <updated>1597926419202</updated>
+       <workItem from="1597926420530" duration="11478000" />
++      <workItem from="1597938238368" duration="620000" />
++      <workItem from="1598002375833" duration="15000" />
+     </task>
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="WindowStateProjectService">
+     <state x="1851" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1597935458678">

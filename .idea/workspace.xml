@@ -16,10 +16,22 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8564139a-d908-4dea-9aaf-fe43636c4290" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MIT Lesson 1 - The Shell.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MIT Lesson 2 - Shell Tools and Scripting .md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MIT Lesson 3 - Editors(Vim).md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MIT Lesson 4 - Data Wrangling.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MIT Lesson 6 - Version Control.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ubuntu.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -38,7 +50,9 @@
     <option name="projectConfigVersion" value="2" />
   </component>
   <component name="ProjectId" id="1gMZS10AMNvrlDFOwT4iqGPe4CC" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -46,6 +60,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -71,7 +86,13 @@
       <workItem from="1598207361872" duration="241000" />
       <workItem from="1598209512002" duration="4986000" />
       <workItem from="1598253672496" duration="13000" />
-      <workItem from="1598257004680" duration="1866000" />
+      <workItem from="1598257004680" duration="15414000" />
+      <workItem from="1598334999332" duration="12000" />
+      <workItem from="1598335391664" duration="5474000" />
+      <workItem from="1598349124218" duration="241000" />
+      <workItem from="1598350144692" duration="394000" />
+      <workItem from="1598359948052" duration="4403000" />
+      <workItem from="1598432467111" duration="604000" />
     </task>
     <servers />
   </component>
@@ -83,27 +104,56 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="1859" y="256" width="653" height="411" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598350413180">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="351" y="494" width="653" height="411" key="#com.intellij.fileTypes.FileTypeChooser/1366.0.1920.1080/0.312.1366.768@0.312.1366.768" timestamp="1598270864956" />
+    <state x="1859" y="256" key="#com.intellij.fileTypes.FileTypeChooser/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1598350413180" />
+    <state x="2301" y="381" width="424" height="491" key="FileChooserDialogImpl" timestamp="1598284641195">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2301" y="381" width="424" height="491" key="FileChooserDialogImpl/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1598284641195" />
     <state x="1851" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1597935458678">
       <screen x="0" y="27" width="3286" height="1053" />
     </state>
     <state x="1851" y="188" width="1022" height="737" key="SettingsEditor/0.27.3286.1053@0.27.3286.1053" timestamp="1597935458678" />
-    <state x="2207" y="233" width="848" height="794" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598022120423">
-      <screen x="1366" y="0" width="1920" height="1080" />
+    <state x="598" y="457" width="394" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598363281720">
+      <screen x="0" y="312" width="1366" height="768" />
     </state>
     <state x="1438" y="274" width="857" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.3286.1053@0.27.3286.1053" timestamp="1597935781840" />
-    <state x="598" y="478" width="384" height="602" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1366.0.1920.1080/0.312.1366.768@0.312.1366.768" timestamp="1598012510456" />
+    <state x="598" y="457" width="394" height="623" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1366.0.1920.1080/0.312.1366.768@0.312.1366.768" timestamp="1598363281720" />
     <state x="2207" y="233" width="848" height="794" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1598022120423" />
     <state x="463" y="611" width="429" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598002597219">
       <screen x="0" y="312" width="1366" height="768" />
     </state>
     <state x="463" y="611" width="429" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1366.0.1920.1080/0.312.1366.768@0.312.1366.768" timestamp="1598002597219" />
+    <state x="469" y="496" width="479" height="483" key="search.everywhere.popup" timestamp="1598260943789">
+      <screen x="0" y="312" width="1366" height="768" />
+    </state>
+    <state x="469" y="496" width="479" height="483" key="search.everywhere.popup/1366.0.1920.1080/0.312.1366.768@0.312.1366.768" timestamp="1598260943789" />
+    <state x="2025" y="259" width="672" height="678" key="search.everywhere.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1598259554268" />
   </component>
 </project>
